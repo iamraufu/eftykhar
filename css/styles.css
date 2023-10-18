@@ -10,7 +10,9 @@ body {
     margin: 0;
 }
 
+
 /* Navbar */
+
 .navbar {
     position: sticky;
     top: 0;
@@ -56,7 +58,7 @@ body {
     text-decoration: none;
 }
 
-.nav-items-link:hover{
+.nav-items-link:hover {
     color: #3b82f6;
 }
 
@@ -64,13 +66,14 @@ body {
     .navbar-container {
         display: block;
     }
-
     .nav-items-container {
         padding: 0px;
     }
 }
 
+
 /* Hero */
+
 .hero-container {
     display: flex;
     flex-wrap: wrap;
@@ -111,7 +114,9 @@ body {
     text-align: justify;
 }
 
+
 /* Resume */
+
 .resume-container,
 .certificates-container,
 .skills-container,
@@ -128,9 +133,8 @@ body {
     margin-bottom: 0;
 }
 
-.subtitle-container > .subtitle, 
-.subtitle-container > .line
-{
+.subtitle-container>.subtitle,
+.subtitle-container>.line {
     text-align: center;
     margin: 0 auto;
     display: block;
@@ -213,15 +217,41 @@ body {
     margin: 0;
 }
 
+
 /* Certificates */
+
 .certificates-container {
     min-height: 100vh;
 }
 
+
 /* Skills */
-.skills-sub-container{
+
+.skills-sub-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skills-progress-container {
+    margin: 1rem 0;
+}
+
+.skills-progress {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill {
+    font-size: 13px;
+}
+
+.percentage {
+    color: #888;
+    font-size: 11px;
 }
 
 .progress {
@@ -229,11 +259,19 @@ body {
     width: 100%;
     border: 2px solid #444;
     border-radius: 0.5rem;
-    margin-top: 0.25rem;
+    /* margin-top: 0.25rem; */
     accent-color: #444;
 }
-.progress::before{
-    accent-color: red;
+
+progress::-webkit-progress-value {
+    background-color: rgb(59 130 246);
+}
+
+
+/* Contact */
+
+.contact-info-container a {
+    text-decoration: none;
 }
 
 .container {
@@ -258,27 +296,22 @@ body {
     .container {
         max-width: 960px;
     }
-
     .hero-left {
         width: 40%;
     }
-
     .hero-right {
         width: 60%;
     }
-
 }
 
 @media (max-width: 992px) {
     .navbar {
         background-color: rgba(34, 34, 34, 1);
     }
-
     .resume-sub-container,
     .resume-list {
         display: block;
     }
-
     .resume-description {
         padding-left: 2rem;
     }
